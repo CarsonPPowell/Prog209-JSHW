@@ -1,21 +1,19 @@
-let words = ["apple", "grape", "banana"];
+let words = [];
 let buttons = ["RED", "SWAP"];
-let swappedWords = ["apple", "grape", "banana"];
+let swappedWords = [];
 let isSwapped = false;
 
 console.log("Hello World");
 function getWords() {
   for (i = 0; i <= 2; i++) {
-    console.log("Enter a word: ");
-    ///response = prompt("Enter a word: ");
-    //swappedWords.push(response);
-    //words.push(response);
+    response = prompt("Enter a word: ");
+    swappedWords.push(response);
+    words.push(response);
   }
 }
 
 function displayWords(word) {
     let ul = document.querySelector("ul");
-  
     if (!ul) {
       ul = document.createElement("ul");
       document.body.appendChild(ul);
@@ -30,8 +28,7 @@ function displayWords(word) {
           li = document.createElement('li');
           ul.appendChild(li);
       }
-  
-      // Update the text content of the li element
+
       li.textContent = word[i];
     }
   }
